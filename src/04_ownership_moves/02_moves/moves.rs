@@ -11,9 +11,7 @@ fn move_objects () {
     let t = s;
     // let u = s; s的值被移动到t，现在s未初始化，赋值给u会报错。
 
-
 }
-
 
 
 fn more_examples () {
@@ -29,5 +27,14 @@ fn more_examples () {
         b(x)
     }
     
-    h(x);
+    h(x);// x已经被a或b使用，这里会报错
+    
+
+    while 1 {
+        g(x);
+        x = h();
+    }
+    e(x);
+
+
 }
