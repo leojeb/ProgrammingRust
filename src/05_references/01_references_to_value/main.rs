@@ -22,7 +22,6 @@ fn main () {
     t2();
     t3();
     t5();
-
 }
 
 
@@ -34,7 +33,6 @@ fn t2 () {
     let anime = Anime { a: "123", b:"234"};
     let anime_ref = &anime;
     assert_eq!(anime.a, (*anime_ref).a)
-
 }
 
 fn t3 () {
@@ -66,3 +64,5 @@ fn t5 () {
     // assert!(std::ptr::eq(ra, rb));
     assert!(ra == &ra); // error: type mismatch: `&i32` vs `&&i32`
 }
+
+
