@@ -4,7 +4,7 @@ fn main() {
     let tax = ["Animal", "test1", "create"];
     assert_eq!(a1[1], 2);
     assert_eq!(tax.len(), 3);
-
+    
     let mut l1 = [true; 10000];
     for i in 1..100 {
         if l1[i] {

@@ -29,6 +29,7 @@ struct Anime {
     a: &'static str,
     b: &'static str
 }    
+
 fn t2 () {
     let anime = Anime { a: "123", b:"234"};
     let anime_ref = &anime;
