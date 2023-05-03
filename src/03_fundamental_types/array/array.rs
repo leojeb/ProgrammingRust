@@ -15,6 +15,7 @@ fn main() {
             }
         }
     }
+    println!("{:?}", l1);
     // assert!(l1[234]);
     assert!(!l1[9876]);
     // println!("{}",l1)
