@@ -120,7 +120,7 @@ fn working_with_multiple_error_types() {
     // 新建一个err并转换成GenericError类型
     let new_err = io::Error::new(
         io::ErrorKind::Other, "timed out"); 
-    return Err(GenericError::from(new_err))
+    return Err(GenericError::from(new_err));
     // 第二种做法，错误类型太宽泛，按如下做法来判断返回值是否为某一特定错误类型
     match do_something() {
         Ok(()) => return Ok(()),

@@ -3,7 +3,7 @@
 
 // fn show_files() -> io::Result<()> {
 //     let mut v = vec![];
-//     //  如下函数不能在函数体里直接访问变量v从而形成闭包，
+//     //  函数不能在函数体里直接访问变量v从而形成闭包，
 //     fn cmp_by_timestamp_then_name(a: &FileInfo, b: &FileInfo) -> Ordering {
 //         a.timestamp.cmp(&b.timestamp)
 //             // first, compare timestamps

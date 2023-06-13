@@ -2,6 +2,8 @@
 extern crate rocket;
 // extern crate serde;
 extern crate serde_json;
+pub mod 09_structs;
+
 
 use rocket::serde::json::{Json, Value};
 use rocket::serde::{Deserialize, Serialize};

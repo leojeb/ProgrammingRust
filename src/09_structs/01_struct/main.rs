@@ -48,6 +48,7 @@ fn tuple_struct()  {
 fn unit_struct()  {
     struct OnePunch;
     let o = OnePunch;
+    
 }
 
 
