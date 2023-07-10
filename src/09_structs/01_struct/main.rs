@@ -1,5 +1,6 @@
 fn main()  {
-    
+    tuple_struct();
+    unit_struct();
 }
 
 #[derive(Debug, Clone)]
@@ -46,9 +47,10 @@ fn tuple_struct()  {
 
 
 fn unit_struct()  {
+    #[derive(Debug)]
     struct OnePunch;
     let o = OnePunch;
-    
+    println!("o: {:?}", o);
 }
 
 
