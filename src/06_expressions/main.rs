@@ -26,7 +26,7 @@ fn t1() {
 }
 
 fn t2() {
-    let a = 1;
+    let a = 1;  
     let b = match a {
         1 => println!("ok1"),
         2 => println!("ok2"),
