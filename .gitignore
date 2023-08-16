@@ -16,3 +16,6 @@ Cargo.lock
 **/*.exe
 # linux executable builds of rustc 
 main
+cancan-docker/cancan.dockerfile
+cancan-docker/a.json
+cancan-docker/create_meta_table.sql

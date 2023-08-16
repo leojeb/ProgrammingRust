@@ -37,7 +37,9 @@ fn normal_struct()  {
 
 }
 
+
 fn tuple_struct()  {
+    struct SingleTuple(pub u32);
     struct Bound(pub usize, pub usize);
     let b1 = Bound(1,2);
     println!("multiply{:}", b1.1 * b1.0);
