@@ -14,7 +14,7 @@ fn main()  {
         Equal
     }
 
-    println!("OK {:}", HttpStatus::Ok as i8);
+    println!("OK {:}", MyHttpStatus::Ok as i8);
     #[derive(Debug)]
     struct A {
         a: String,
@@ -31,24 +31,26 @@ fn main()  {
     };
     // println!("a{:?}", a1);
     println!("b{:?}", b1.b);
+
+    t1();
 }
 
 #[derive(Copy, Clone, Debug, PartialEq, Eq)]
 enum TimeUnits {
     Seconds, Mins, Hours
 }
-fn t1 () {
+fn t1() {
     let four_years_ago = RoughTime::Past(TimeUnits::Hours, 4 * 365 * 24);
 }
 
-pub enum HttpStatus {
+pub enum MyMyHttpStatus {
     Ok = 200,
     NotFound = 404,
     NotModified = 304
 }
-pub fn http_status_from_u32(n: u32) -> Option<HttpStatus> {
+pub fn http_status_from_u32(n: u32) -> Option<MyHttpStatus> {
     match n {
-        200 => Some(HttpStatus::Ok),
+        200 => Some(MyHttpStatus::Ok),
         _ => None
     }
 }

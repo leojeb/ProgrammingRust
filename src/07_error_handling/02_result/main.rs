@@ -88,7 +88,7 @@ fn print_error()  {
     }
 }
 
-fn propagating_errors()  {
+fn propagating_errors() -> Result<T, E>  {
     // ? 成功返回WeatherReport类型值，失败直接return error，? 只能在返回值是Result类型的函数上用
     let weather = get_weather("武汉")?; 
     let ok_value = get_weather("上海").as_ref().ok()?;

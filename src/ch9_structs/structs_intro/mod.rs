@@ -1,8 +1,11 @@
-fn main()  {
+
+#[test]
+fn t1()  {
     tuple_struct();
     unit_struct();
 }
 
+/// 和java不一样, pixels(引用值)和size的值是内嵌在结构体中的,体现rust独有的所有权机制
 #[derive(Debug, Clone)]
 struct GrayScaleMap {
     pixels: Vec<u8>,
@@ -43,8 +46,6 @@ fn tuple_struct()  {
     struct Bound(pub usize, pub usize);
     let b1 = Bound(1,2);
     println!("multiply{:}", b1.1 * b1.0);
-
-
 }
 
 
