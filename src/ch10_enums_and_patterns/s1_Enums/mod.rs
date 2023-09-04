@@ -1,11 +1,12 @@
 use std::collections::HashMap;
+
 enum Pet {
     Dog,
     Cat
 }
 use self::Pet::*;
 
-fn main()  {
+fn test()  {
     // use repr to cover default type(i8) of these enum value
     #[repr(i16)]
     enum Ordering {
@@ -43,7 +44,7 @@ fn t1() {
     let four_years_ago = RoughTime::Past(TimeUnits::Hours, 4 * 365 * 24);
 }
 
-pub enum MyMyHttpStatus {
+pub enum MyHttpStatus {
     Ok = 200,
     NotFound = 404,
     NotModified = 304
@@ -102,7 +103,7 @@ enum Result<T, E> {
     Ok(T),
     Err(E)
 }
-enum Option<T> {
-    Some(T),
-    None
-}
+// enum Option<T> {
+//     Some(T),
+//     None
+// }

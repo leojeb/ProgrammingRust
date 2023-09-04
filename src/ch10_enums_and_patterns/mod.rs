@@ -1,3 +1,2 @@
-pub mod s1_Enums;
-pub mod s2_Patterns;
-
+pub mod s1_enums;
+pub mod s2_patterns;

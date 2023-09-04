@@ -1,7 +1,10 @@
+use std::cmp::Ordering::*;
+
 
 /**
  * 字面量通配符匹配
  */
+
 #[test]
 fn t1() {
     let a = "asf";
@@ -15,4 +18,8 @@ fn t1() {
 /**
  * tuple, struct 匹配
  */
-#[test]
+pub fn describe_points(x: i32, y: i32) {
+    match (x.cmp(&0), y.cmp(&1)) {
+        Equal
+    }
+}
