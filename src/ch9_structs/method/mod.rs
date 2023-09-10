@@ -1,12 +1,25 @@
-use std::rc::Rc;
+use std::{rc::Rc, io, f32::consts::E};
 
-
-fn main()  {
+#[test]
+fn test()  {
     // methods();
     pointers();
     lifecycle();
+
 }
 
+fn return_err() -> Result<String, io::Error> {
+    todo!()
+}
+
+fn t1() {
+    match return_err() {
+        Ok(v) => Ok(v),
+        Err(e) => {
+            Err(e.downcast::<io::Error>())
+        }
+    };
+}
 pub struct Coordinate(pub i64, pub i64);
 pub struct Queue<T> {
     pub older_q: Vec<T>,
@@ -73,7 +86,8 @@ fn methods()  {
  */
 fn pointers()  {
     let mut bq = Box::new(Queue::<u8>::new());
-    bq.push(2);
+    bq.push(2); // 直接调用该类型的实例或静态方法
+    
     let mut rcq = Rc::new(Queue::<i8>::new());
     rcq.rc_fn();
     let c1 = Queue::<u16>::Zero;
@@ -81,11 +95,14 @@ fn pointers()  {
 
 }
 
+/// 生命周期演示
+#[test]
 fn lifecycle() {
     pub struct Extrema<'elt> {
         biggest: &'elt i8,
         smallest: &'elt i8,
     }
+    
     fn find_extrema<'s>(slice: &'s [i8]) -> Extrema<'s> {
         let mut biggest = &slice[0];
         let mut smallest = &slice[0];
