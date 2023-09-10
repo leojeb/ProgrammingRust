@@ -14,7 +14,7 @@ fn test()  {
         Greater,
         Equal
     }
-
+    
     println!("OK {:}", MyHttpStatus::Ok as i8);
     #[derive(Debug)]
     struct A {

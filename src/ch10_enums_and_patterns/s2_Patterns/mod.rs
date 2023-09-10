@@ -19,7 +19,10 @@ fn t1() {
  * tuple, struct 匹配
  */
 pub fn describe_points(x: i32, y: i32) {
-    match (x.cmp(&0), y.cmp(&1)) {
-        Equal
-    }
+    match (x.cmp(&0), y.cmp(&0)) {
+        (Equal, Equal) => "at the origin",
+        (_, Equal) => "on the x axis",
+        (Equal, _) => "on the y axis",
+        other => ""
+    };
 }
